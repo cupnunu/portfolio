@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samantha Co — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back-link{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.78rem; color:var(--accent);
+    letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="eyebrow">Crunchyroll • Opera • Co-founder • Community Builder</div>
+  <h1 class="name" style="font-size:clamp(1.5rem, 2.8vw, 2.2rem); line-height:1.3;">Samantha Co is an award-winning Product Designer, and very good soup maker based in SF. <span style="color:var(--spark);">⸜( *ˊᵕˋ* )⸝</span></h1>
+  <div class="hero-breaker">\\\</div>
+</header>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <span class="section-label">More Work</span>
+    <div class="grid">
+
+      <a href="esr.html" class="card reveal" style="background-color:#000000;">
+        <div class="card-thumb"><img src="esr-glyphs-thumb.webp" alt=""></div>
+        <div class="card-overlay">
+          <h3>End Slate Recommendations <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="series-redesign.html" class="card reveal" style="background-color:#258441;">
+        <div class="card-thumb"><img src="seriespagethumb.png" alt=""></div>
+        <div class="card-overlay">
+          <h3>Crunchyroll Series Redesign <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="hime.html" class="card reveal" style="background-color:#FCC101;">
+        <div class="card-thumb"><img src="hime-thumb.webp" alt=""></div>
+        <div class="card-overlay">
+          <h3>Hime's Quest <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="crunchylists.html" class="card reveal" style="background-color:#FF640A;">
+        <div class="card-thumb"><img src="Crunchylists_Thumb.png" alt=""></div>
+        <div class="card-overlay">
+          <h3>Public Crunchylists <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="zen.html" class="card reveal" style="background-color:#7991A1;">
+        <div class="card-thumb"><img src="zenanimation.gif" alt=""></div>
+        <div class="card-overlay">
+          <h3>Zen Screen <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="toolbar.html" class="card reveal" style="background-color:#F6F7F7;">
+        <div class="card-thumb"><img src="toolbarthumb.webp" alt=""></div>
+        <div class="card-overlay">
+          <h3>Opera × Sprint Toolbar <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+      <a href="xiaomi.html" class="card reveal" style="background-color:#50AF17;">
+        <div class="card-thumb"><img src="xiaomithumbnai.webp" alt=""></div>
+        <div class="card-overlay">
+          <h3>Xiaomi × Opera Max <span class="card-spark">✦</span></h3>
+        </div>
+      </a>
+
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var parallaxEls = document.querySelectorAll('.parallax');
+    if(!parallaxEls.length) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+    var ticking = false;
+    function updateParallax(){
+      var viewportCenter = window.innerHeight / 2;
+      parallaxEls.forEach(function(el){
+        var speed = parseFloat(el.getAttribute('data-speed')) || 0.15;
+        var rect = el.getBoundingClientRect();
+        var elCenter = rect.top + rect.height / 2;
+        var distanceFromCenter = elCenter - viewportCenter;
+        var offset = Math.max(-60, Math.min(60, distanceFromCenter * speed * -1));
+        el.style.transform = 'translateY(' + offset + 'px)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateParallax, { passive: true });
+    updateParallax();
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

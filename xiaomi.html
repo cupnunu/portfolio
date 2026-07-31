@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiaomi × Opera Max — Samantha Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back-link{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.78rem; color:var(--accent);
+    letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;
+  }
+  .project-hero{padding-top:56px; padding-bottom:24px;}
+  .project-hero h2.project-title{font-size:clamp(1.7rem, 5vw, 2.4rem); margin-top:18px;}
+  .next-project{
+    display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:32px 0;
+  }
+  .next-project a{
+    color:var(--link-color); text-decoration:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero wrap">
+  <a href="index.html#work" class="back-link">← Back to Work</a>
+  <h2 class="project-title">Xiaomi × Opera Max</h2>
+  <div class="subhead-row">
+    <img src="opera-icon.webp" alt="Opera" class="company-icon">
+    <p class="project-subhead">Opera Software (2015)</p>
+  </div>
+  <div class="featured-media">
+    <img src="xiaomi.webp" alt="Xiaomi x Opera Max data savings app screens">
+  </div>
+</header>
+
+<section class="section" id="xiaomi-case-study" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="project-body">
+      <p class="reveal">During my time at Opera Software, working on the data-savings app Opera Max, I was tasked with designing for OEM partner Xiaomi. The agreement was to integrate the Opera Max technology seamlessly into their device settings.</p>
+
+      <div class="problem-block">
+        <div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap;">
+          <div style="max-width:350px; position:relative;">
+            <svg class="blob parallax" data-speed="0.15" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:-40px; left:-70px; width:260px; height:260px; z-index:-1; pointer-events:none;">
+              <path fill="#A8D0E6" opacity="0.45" d="M45.3,-58.6C58.8,-49.7,69.7,-35.4,74.1,-19.2C78.5,-3,76.4,15.2,68.4,30.4C60.4,45.6,46.5,57.9,30.7,64.8C14.9,71.7,-2.8,73.2,-19.8,69.1C-36.8,65,-53.1,55.3,-63.2,41.1C-73.3,26.9,-77.2,8.2,-74.6,-9.1C-72,-26.4,-62.9,-42.3,-49.7,-51.4C-36.5,-60.5,-19.3,-62.8,-1.6,-60.6C16,-58.4,32,-67.5,45.3,-58.6Z" transform="translate(100 100)" />
+            </svg>
+            <h4 class="reveal" style="margin-top:0;">The Goal</h4>
+            <p class="reveal" style="margin-bottom:0;">The brief was to weave Opera Max into the Xiaomi ecosystem in a way that never felt malicious or like unnecessary bloatware. That meant the integration needed to be visible and useful - customizable through the home screen, lock screen, and shortcuts bar clearly surfacing the relevant information: the user's data usage.</p>
+          </div>
+          <div class="inline-media" style="flex:1; min-width:220px; margin:0;">
+            <img src="homescreen.webp" alt="Xiaomi lock screen and home screen with Opera Max data saver widget" style="max-height:510px; width:auto; margin:0 auto; display:block;">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap;">
+        <div class="inline-media" style="flex:1; min-width:220px; margin:0;">
+          <img src="saver.webp" alt="Super savings settings screen with per-app media size controls" style="max-height:510px; width:auto; margin:0 auto; display:block;">
+        </div>
+        <div style="max-width:350px; position:relative;">
+          <svg class="blob parallax" data-speed="-0.12" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:-40px; left:-70px; width:260px; height:260px; z-index:-1; pointer-events:none;">
+            <path fill="var(--accent)" opacity="0.16" d="M52.4,-63.9C66.8,-53.5,76.6,-36.4,79.6,-18.4C82.6,-0.4,78.8,18.5,69.4,33.9C60,49.3,45,61.2,28,68.6C11,76,-8,78.9,-25.3,73.9C-42.6,68.9,-58.2,56,-67.8,39.6C-77.4,23.2,-81,3.3,-77.1,-14.9C-73.2,-33.1,-61.8,-49.6,-46.9,-59.8C-32,-70,-13.6,-73.9,3.8,-79C21.2,-84.1,38,-74.3,52.4,-63.9Z" transform="translate(100 100)" />
+          </svg>
+          <h4 class="reveal" style="margin-top:0;">Granular App Controls</h4>
+          <p class="reveal" style="margin-bottom:0;">Diving deeper into usage data, users could see exactly what installed apps were doing, and when. New settings gave people far more control over how those apps were allowed to behave in the background.</p>
+        </div>
+      </div>
+
+      <h4 class="reveal" style="margin-top:88px;">Visualizing 'Crunching' Data</h4>
+      <p class="reveal">Rather than loading in a dry utility screen, I added some simple, playful visuals in line with Xiaomi's design language that users could actually interact with in order to see how much data they had saved at a given time.</p>
+      <div class="inline-media" style="display:flex; gap:24px; justify-content:center; flex-wrap:wrap;">
+        <img src="scan.gif" alt="Data savings scan animation" style="width:auto; max-width:48%; border-radius:6px; border:1px solid var(--line);">
+        <img src="scrolltimeline.gif" alt="Data savings check animation with speedometer gauge" style="width:auto; max-width:48%; border-radius:6px; border:1px solid var(--line);">
+      </div>
+
+      <h4 class="reveal">Image-on-Demand</h4>
+      <p class="reveal">One of the more clever settings let users choose whether graphics across web pages and browsers loaded automatically, based on file size and current data usage. This stretched a user's data plan further by letting images load on demand, and quietly worked around the fact that these devices weren't allowed to ship with a built-in ad-blocker.</p>
+      <div class="inline-media">
+        <img src="imagesaver.webp" alt="Browser image-on-demand setting hiding media to save data">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-breaker">\\\</div>
+
+<div class="wrap">
+  <div class="next-project">
+    <a href="index.html#work">Back to all projects →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Crunchylists — Samantha Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back-link{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.78rem; color:var(--accent);
+    letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;
+  }
+  .project-hero{padding-top:56px; padding-bottom:24px;}
+  .project-hero h2.project-title{font-size:clamp(1.7rem, 5vw, 2.4rem); margin-top:18px;}
+  .next-project{
+    display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:32px 0;
+  }
+  .next-project a{
+    color:var(--link-color); text-decoration:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero wrap">
+  <a href="index.html#work" class="back-link">← Back to Work</a>
+  <h2 class="project-title">Public Crunchylists</h2>
+  <div class="subhead-row">
+    <img src="crunchyroll-icon.webp" alt="Crunchyroll" class="company-icon">
+    <p class="project-subhead">Crunchyroll (2025) · 1st Place, Company-Wide AI Hackathon</p>
+  </div>
+  <div class="featured-media">
+    <img src="browse-lists.webp" alt="Browse Crunchylists page with search and top results">
+  </div>
+  <p class="media-caption">Browsing Crunchylists in the existing search experience.</p>
+</header>
+
+<section class="section" id="crunchylists-case-study" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="project-body">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:56px; align-items:center; width:100%;">
+        <p class="reveal" style="margin:0;">Submitted by a small, globally distributed team I assembled that included myself, a product manager, another product designer from LA, and three engineers from Mexico City. Our goal was to bring a stronger sense of community back to the Crunchyroll platform. The feature is currently in development.</p>
+        <div class="inline-media reveal" style="margin:0;">
+          <img src="hackplat.jpeg" alt="Team Hack Platinum accepting the 1st place hackathon prize" style="width:100%; display:block;">
+          <p class="media-caption">First Place Winners Team Hack Platinum, 2025</p>
+        </div>
+      </div>
+
+      <div class="problem-block">
+        <svg class="blob parallax" data-speed="0.15" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#F2C29B" opacity="0.45" d="M45.3,-58.6C58.8,-49.7,69.7,-35.4,74.1,-19.2C78.5,-3,76.4,15.2,68.4,30.4C60.4,45.6,46.5,57.9,30.7,64.8C14.9,71.7,-2.8,73.2,-19.8,69.1C-36.8,65,-53.1,55.3,-63.2,41.1C-73.3,26.9,-77.2,8.2,-74.6,-9.1C-72,-26.4,-62.9,-42.3,-49.7,-51.4C-36.5,-60.5,-19.3,-62.8,-1.6,-60.6C16,-58.4,32,-67.5,45.3,-58.6Z" transform="translate(100 100)" />
+        </svg>
+        <h4 class="reveal">The Problem</h4>
+        <p class="reveal">Fans had no way on the platform to share and introduce friends to their favourite content. We found that users with even a few items on their Watchlist were 30% more likely to stay subscribed and keep watching. We wanted to make that list-building behavior public-facing and shareable, to drive both acquisition and retention.</p>
+      </div>
+
+      <div class="inline-media" style="margin:0 0 32px;">
+        <img src="profiles.webp" alt="Public profile pages showcasing user-generated Crunchylists" style="display:block; border-radius:6px; width:100%;">
+      </div>
+      <div class="solution-block">
+        <svg class="blob parallax" data-speed="-0.12" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="left:-70px; right:auto;">
+          <path fill="var(--accent)" opacity="0.16" d="M52.4,-63.9C66.8,-53.5,76.6,-36.4,79.6,-18.4C82.6,-0.4,78.8,18.5,69.4,33.9C60,49.3,45,61.2,28,68.6C11,76,-8,78.9,-25.3,73.9C-42.6,68.9,-58.2,56,-67.8,39.6C-77.4,23.2,-81,3.3,-77.1,-14.9C-73.2,-33.1,-61.8,-49.6,-46.9,-59.8C-32,-70,-13.6,-73.9,3.8,-79C21.2,-84.1,38,-74.3,52.4,-63.9Z" transform="translate(100 100)" />
+        </svg>
+        <h4 class="reveal" style="margin-top:0;">The Solution</h4>
+        <p class="reveal" style="margin-bottom:0;">Our team proposed leveraging the platform's under-utilized profile pages to showcase public lists whenever a user opted in. Shareable, user-generated lists could then surface across high-traffic pages: the home feed, search, and series pages, giving fans a new avenue for discovery through curators they trusted. An added bonus that tipped the scale was providing a way to spotlight celebrity and influencer lists that would build trust across the fandom.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:56px; align-items:center; margin-top:88px; width:100%;">
+        <div style="min-width:0;">
+          <h4 class="reveal" style="margin-top:0;">The AI Requirement</h4>
+          <p class="reveal" style="margin-bottom:0;">The 2025 Hackathon's core requirement was to build AI directly into the feature. Our team used it to moderate user-generated lists. Assisting with naming conventions, keeping compositions licensor-friendly, applying genre and keyword tagging, and surfacing additional content suggestions.</p>
+        </div>
+        <div class="inline-media" style="margin:0;">
+          <img src="mylists.png" alt="My Lists screen showing My Crunchylists tab with user-generated lists" style="max-height:510px; width:auto; max-width:100%; margin:0 auto; display:block;">
+        </div>
+      </div>
+
+      <div class="inline-media" style="margin-top:88px;">
+        <img src="list-naming.webp" alt="Generative AI previewing randomly generated list titles" style="display:block;">
+        <p class="media-caption">Previewing how randomly generated list titles could work using generative AI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-breaker">\\\</div>
+
+<div class="wrap">
+  <div class="next-project">
+    <a href="index.html#work">Back to all projects →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var parallaxEls = document.querySelectorAll('.parallax');
+    if(!parallaxEls.length) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+    var ticking = false;
+    function updateParallax(){
+      var viewportCenter = window.innerHeight / 2;
+      parallaxEls.forEach(function(el){
+        var speed = parseFloat(el.getAttribute('data-speed')) || 0.15;
+        var rect = el.getBoundingClientRect();
+        var elCenter = rect.top + rect.height / 2;
+        var distanceFromCenter = elCenter - viewportCenter;
+        var offset = Math.max(-60, Math.min(60, distanceFromCenter * speed * -1));
+        el.style.transform = 'translateY(' + offset + 'px)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateParallax, { passive: true });
+    updateParallax();
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

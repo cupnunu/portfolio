@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Screen — Samantha Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back-link{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.78rem; color:var(--accent);
+    letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;
+  }
+  .project-hero{padding-top:56px; padding-bottom:24px;}
+  .project-hero h2.project-title{font-size:clamp(1.7rem, 5vw, 2.4rem); margin-top:18px;}
+  .next-project{
+    display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:32px 0;
+  }
+  .next-project a{
+    color:var(--link-color); text-decoration:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero wrap">
+  <a href="index.html#work" class="back-link">← Back to Work</a>
+  <h2 class="project-title">Zen Screen</h2>
+  <div class="subhead-row">
+    <img src="zenicon.png" alt="Zen Screen" class="company-icon">
+    <p class="project-subhead">Zenlabs, Co-founder (2018), acquired by <a href="https://www.life360.com/">Life360</a></p>
+  </div>
+  <p class="reveal" style="margin-top:12px; font-size:0.9rem;">
+    In the press: <a href="https://techcrunch.com/2018/05/29/zenscreen-could-help-you-achieve-a-balanced-digital-diet/" target="_blank" rel="noopener noreferrer">TechCrunch</a>
+  </p>
+  <div class="featured-media">
+    <img src="zen_top_4.gif" alt="Zen Screen child dashboard showing Quiet Time and activity">
+  </div>
+</header>
+
+<section class="section" id="zen-case-study" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="project-body">
+      <p class="reveal" style="max-width:700px;">Zen Screen was a digital-wellbeing app built out of a startup I co-founded with a few former colleagues from Opera Software, tackling the growing issue of screen and device addiction among children.</p>
+
+      <div style="display:flex; gap:56px; align-items:center; flex-wrap:wrap; max-width:780px;">
+        <div class="inline-media" style="flex:0 1 374px; margin:0; width:374px;">
+          <img src="parenttimeout_5.gif" alt="Parent device showing Quiet Time prompt and child profile activity" style="max-height:407px; width:auto; max-width:100%; margin:0 auto; display:block;">
+        </div>
+        <div class="problem-block" style="position:relative; max-width:350px;">
+          <svg class="blob parallax" data-speed="0.15" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#A8D0E6" opacity="0.45" d="M45.3,-58.6C58.8,-49.7,69.7,-35.4,74.1,-19.2C78.5,-3,76.4,15.2,68.4,30.4C60.4,45.6,46.5,57.9,30.7,64.8C14.9,71.7,-2.8,73.2,-19.8,69.1C-36.8,65,-53.1,55.3,-63.2,41.1C-73.3,26.9,-77.2,8.2,-74.6,-9.1C-72,-26.4,-62.9,-42.3,-49.7,-51.4C-36.5,-60.5,-19.3,-62.8,-1.6,-60.6C16,-58.4,32,-67.5,45.3,-58.6Z" transform="translate(100 100)" />
+          </svg>
+          <h4 class="reveal" style="margin-top:0;">The Concept</h4>
+          <p class="reveal" style="margin-bottom:0;">"Zen" emphasizes rigorous self-control and meditation practice. Rather than building another dry usage-monitoring utility, the goal was to bring that same calm, intentional feeling into how families managed screen time for themselves and their kids.</p>
+        </div>
+      </div>
+
+
+      <div style="display:flex; gap:56px; align-items:center; flex-wrap:wrap; justify-content:flex-end; margin-top:88px; max-width:780px;">
+        <div class="solution-block" style="position:relative; max-width:350px;">
+          <svg class="blob parallax" data-speed="-0.12" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#5A8DBF" opacity="0.2" d="M52.4,-63.9C66.8,-53.5,76.6,-36.4,79.6,-18.4C82.6,-0.4,78.8,18.5,69.4,33.9C60,49.3,45,61.2,28,68.6C11,76,-8,78.9,-25.3,73.9C-42.6,68.9,-58.2,56,-67.8,39.6C-77.4,23.2,-81,3.3,-77.1,-14.9C-73.2,-33.1,-61.8,-49.6,-46.9,-59.8C-32,-70,-13.6,-73.9,3.8,-79C21.2,-84.1,38,-74.3,52.4,-63.9Z" transform="translate(100 100)" />
+          </svg>
+          <h4 class="reveal" style="margin-top:0;">The Parent Experience</h4>
+          <p class="reveal" style="margin-bottom:0;">A "Parent" profile could create and track usage and activity across every device a "child" used under the account. Parents could schedule when apps were off-limits, and set daily screen-time limits to keep each child's usage within a healthy range.</p>
+        </div>
+        <div class="inline-media" style="flex:0 1 321px; margin:0; width:321px;">
+          <img src="scrolling.gif" alt="Parent device showing child profile, activity, and app usage breakdown" style="max-height:420px; width:auto; max-width:100%; margin:0 auto; display:block;">
+        </div>
+      </div>
+
+      <div style="display:flex; gap:56px; align-items:center; flex-wrap:wrap; margin-top:88px; max-width:780px;">
+        <div class="inline-media" style="flex:0 1 305px; margin:0; width:305px;">
+          <img src="timeout.gif" alt="Child device entering Quiet Time, apps and browsing locked" style="max-height:520px; width:auto; max-width:100%; margin:0 auto; display:block;">
+        </div>
+        <div style="max-width:419px; position:relative;">
+          <svg class="blob parallax" data-speed="0.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:-40px; left:-70px; width:260px; height:260px; z-index:-1; pointer-events:none;">
+            <path fill="#8FB8D9" opacity="0.35" d="M48.1,-60.2C61.5,-51.6,71.4,-37.4,75.9,-21.5C80.4,-5.6,79.5,12,72.6,26.8C65.7,41.6,52.8,53.6,38.2,61.4C23.6,69.2,7.3,72.8,-9.2,71.9C-25.7,71,-42.4,65.6,-54.8,54.9C-67.2,44.2,-75.3,28.2,-77.8,11.2C-80.3,-5.8,-77.2,-23.8,-68.1,-38.1C-59,-52.4,-43.9,-63,-27.9,-70.1C-11.9,-77.2,5,-80.8,20.9,-76.7C36.8,-72.6,48.1,-60.2,48.1,-60.2Z" transform="translate(100 100)" />
+          </svg>
+          <h4 class="reveal" style="margin-top:0;">Quiet Time</h4>
+          <p class="reveal" style="margin-bottom:0; max-width:419px;">The centerpiece feature let a parent trigger a "Quiet Time" session remotely. On the child's device, non-essential apps would hide immediately and the device would lock, staying that way until the parent ended the session from their own phone — a simple, calm way to create tech-free windows without a confrontation over the device itself.</p>
+        </div>
+      </div>
+
+      <div class="inline-media" style="margin-top:88px;">
+        <img src="modals.webp" alt="Schedules, limits, and app blocking modals across the Zen Screen experience">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-breaker">\\\</div>
+
+<div class="wrap">
+  <div class="next-project">
+    <a href="index.html#work">Back to all projects →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var parallaxEls = document.querySelectorAll('.parallax');
+    if(!parallaxEls.length) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+    var ticking = false;
+    function updateParallax(){
+      var viewportCenter = window.innerHeight / 2;
+      parallaxEls.forEach(function(el){
+        var speed = parseFloat(el.getAttribute('data-speed')) || 0.15;
+        var rect = el.getBoundingClientRect();
+        var elCenter = rect.top + rect.height / 2;
+        var distanceFromCenter = elCenter - viewportCenter;
+        var offset = Math.max(-60, Math.min(60, distanceFromCenter * speed * -1));
+        el.style.transform = 'translateY(' + offset + 'px)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateParallax, { passive: true });
+    updateParallax();
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

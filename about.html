@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Samantha Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .about-hero{
+    display:flex; align-items:flex-start; gap:0; flex-wrap:wrap;
+    padding:24px 0 16px;
+  }
+  .about-hero-photo{
+    width:360px; height:460px; flex-shrink:0;
+    clip-path: path("M180,11.5 C275,11.5 349,69 349,172.5 C349,264.5 339,322 296.5,379.5 C254,437 212,454 159,448.5 C95,442.75 42,402.5 21,333.5 C0,264.5 10.6,172.5 42.4,103.5 C74.1,34.5 116.5,11.5 180,11.5 Z");
+    overflow:hidden; background:var(--bg-raised); position:relative;
+  }
+  .about-hero-photo img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(0.15);}
+  .about-hero-text{
+    flex:1; min-width:260px; position:relative; margin-left:-64px; margin-top:12px; z-index:2; padding-left:24px;
+  }
+  .about-hero-text p.about-hero-wave{margin-left:-24px;}
+  .about-hero-text p{margin-bottom:20px; margin-left:80px;}
+  .about-hero-greet{
+    font-family:'Lexend Giga', sans-serif; font-weight:600; font-size:clamp(2rem, 6vw, 3.4rem);
+    margin:0 0 8px; line-height:1.05;
+  }
+  .about-hero-wave{
+    font-family:'Lexend Giga', sans-serif; font-weight:600; font-size:clamp(2rem, 6vw, 3.4rem);
+    color:var(--ink); margin:0 0 4px; line-height:1.05; margin-left:-24px;
+  }
+  .accent-text{color:var(--accent); font-weight:600;}
+  .about-hero-lede{
+    color:var(--ink-soft); margin-top:16px; max-width:340px;
+  }
+  .about-columns{display:flex; gap:56px; flex-wrap:wrap; margin-top:8px;}
+  .about-columns > div{flex:1; min-width:200px;}
+  @media (max-width:768px){
+    .about-hero-photo{width:100%;}
+    .about-hero-text{margin-left:0; padding-left:0; margin-top:-32px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="about-hero">
+    <div class="about-hero-photo reveal">
+      <img src="about-photo.png" alt="Samantha Co laughing in front of a corrugated metal wall">
+    </div>
+    <div class="about-hero-text">
+      <p class="about-hero-wave">Hi, Mabuhay,</p>
+      <h1 class="about-hero-greet">I'm Samantha</h1>
+      <p class="about-hero-greet" style="margin-left:60px; margin-top:-8px;"><span class="emoticon">ʕ•ᴥ•ʔ</span></p>
+      <p>I'm a Staff Product Designer from the Philippines via Canada, now based in San Francisco. An immigrant raised in culturally mixed and diverse hubs, my joy comes from <span class="accent-text">connecting humans</span> to content and experiences they love through <span class="accent-text">meaningful concepts</span>. </p>
+
+        <p>I built my first commissioned website at 11 for a local laser tag company, growing up in the age of Geocities and Angelfire websites, and the early days of Adobe Photoshop. I eventually earned my BA in Interaction Design from Simon Fraser University in 2012. I've led design at <a href="https://www.keycafe.com/s/" target="_blank" rel="noopener noreferrer">Keycafe</a>; was part of <a href="https://www.opera.com" target="_blank" rel="noopener noreferrer">Opera Software</a>'s design team; co-founded Zenlabs, and OurJams cloud studio; and freelanced steadily over the years.</p>
+      <p>I was most recently leading design for Crunchyroll's Marketing Technology organization, and experimental designs for the cross-platform video experience. Currently exploring my next Staff or Director-level Acquisition and Growth design role.</p>
+
+      <h4 class="about-subhead" style="margin-left:80px;">Selected Clients:</h4>
+      <p class="about-list" style="margin-left:80px;">Keycafe, Skyfire, Opera Software, Zenlabs, OurJamz, Crunchyroll</p>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="about" style="padding-top:8px;">
+  <div class="wrap">
+
+    <div class="about-grid">
+      <div class="about-text" style="max-width:none;">
+        <div style="display:flex; gap:56px; flex-wrap:wrap; align-items:flex-start;">
+          <div style="position:relative; flex:1; min-width:240px;">
+            <svg class="star-decor parallax" data-speed="0.18" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:-40px; left:-60px; width:220px; height:220px; z-index:-1; pointer-events:none;">
+              <path fill="#F2C14E" opacity="0.4" d="M100.0,15.0 L117.9,44.8 L150.0,31.2 L146.9,65.9 L180.8,73.7 L158.0,100.0 L180.8,126.3 L146.9,134.1 L150.0,168.8 L117.9,155.2 L100.0,185.0 L82.1,155.2 L50.0,168.8 L53.1,134.1 L19.2,126.3 L42.0,100.0 L19.2,73.7 L53.1,65.9 L50.0,31.2 L82.1,44.8 Z" />
+            </svg>
+            <h4 class="about-subhead">Recognition</h4>
+            <ul class="about-list" style="list-style:disc; padding-left:20px; margin:0;">
+              <li>Crunchyroll Hackathon, Winner 2025</li>
+              <li>The Anime Awards, Design Lead 2022–2024</li>
+              <li>Crunchyroll Hackathon, Arc Concept 2023</li>
+              <li>Anime for Humanity, Mascot Design and Illustrator 2022</li>
+              <li>Zenlabs Life360 Acquisition, 2019</li>
+            </ul>
+          </div>
+
+          <div style="flex:1; min-width:240px; margin-top:56px; position:relative;">
+            <svg class="star-decor parallax" data-speed="0.14" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:60px; left:-50px; width:200px; height:200px; z-index:-1; pointer-events:none;">
+              <path fill="#F7DE8F" opacity="0.5" d="M100.0,15.0 L117.9,44.8 L150.0,31.2 L146.9,65.9 L180.8,73.7 L158.0,100.0 L180.8,126.3 L146.9,134.1 L150.0,168.8 L117.9,155.2 L100.0,185.0 L82.1,155.2 L50.0,168.8 L53.1,134.1 L19.2,126.3 L42.0,100.0 L19.2,73.7 L53.1,65.9 L50.0,31.2 L82.1,44.8 Z" />
+            </svg>
+            <p class="results-statement" style="font-size:1.25rem;">I love collaborating with other passionate, and creative people, so please drop me a line:</p>
+            <p style="margin:0;">
+              <a href="mailto:svmanthaco@gmail.com">svmanthaco@gmail.com</a><br>
+              <a href="https://www.linkedin.com/in/samanthaco/" target="_blank" rel="noopener noreferrer">in/samanthaco/</a>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

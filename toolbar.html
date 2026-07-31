@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opera × Sprint Toolbar — Samantha Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&family=Lexend+Giga:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back-link{
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.78rem; color:var(--accent);
+    letter-spacing:0.06em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px;
+  }
+  .project-hero{padding-top:56px; padding-bottom:24px;}
+  .project-hero h2.project-title{font-size:clamp(1.7rem, 5vw, 2.4rem); margin-top:18px;}
+  .next-project{
+    display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px;
+    padding:32px 0;
+  }
+  .next-project a{color:var(--link-color); text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+<div class="page">
+
+<nav>
+  <div class="wrap">
+    <div class="logo">S. Co</div>
+    <div class="navlinks">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero wrap">
+  <a href="index.html#work" class="back-link">← Back to Work</a>
+  <h2 class="project-title">Opera × Sprint Toolbar</h2>
+  <div class="subhead-row">
+    <img src="opera-icon.webp" alt="Opera Software" class="company-icon">
+    <p class="project-subhead">Opera Software</p>
+  </div>
+  <div class="featured-media">
+    <img src="opera-home.webp" alt="Modern Opera browser home page">
+  </div>
+</header>
+
+<section class="section" id="toolbar-case-study" style="padding-top:24px; padding-bottom:24px;">
+  <div class="wrap">
+    <div class="project-body">
+      <p class="reveal" style="max-width:700px;">Developed during my time at Opera, I led conceptual proposals for a partnership with mobile carrier Sprint to build a customizable toolbar widget into an iOS-based browser. Users could add and rearrange their own shortcuts directly in the toolbar — an idea that ended up setting the precedent still visible in <a href="https://www.opera.com" target="_blank" rel="noopener noreferrer">Opera's desktop browser</a> design today.</p>
+
+      <div class="inline-media reveal">
+        <img src="tb1.webp" alt="Sprint Lumen toolbar concept on iPad and iPhone">
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:56px; align-items:center; margin-top:56px; width:100%;">
+        <div style="position:relative;">
+          <svg class="blob parallax" data-speed="0.15" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute; top:-40px; left:-60px; width:240px; height:240px; z-index:-1; pointer-events:none;">
+            <path fill="#F2C29B" opacity="0.45" d="M45.3,-58.6C58.8,-49.7,69.7,-35.4,74.1,-19.2C78.5,-3,76.4,15.2,68.4,30.4C60.4,45.6,46.5,57.9,30.7,64.8C14.9,71.7,-2.8,73.2,-19.8,69.1C-36.8,65,-53.1,55.3,-63.2,41.1C-73.3,26.9,-77.2,8.2,-74.6,-9.1C-72,-26.4,-62.9,-42.3,-49.7,-51.4C-36.5,-60.5,-19.3,-62.8,-1.6,-60.6C16,-58.4,32,-67.5,45.3,-58.6Z" transform="translate(100 100)" />
+          </svg>
+          <h4 class="reveal" style="margin-top:0;">Carrier Integration</h4>
+          <p class="reveal" style="margin-bottom:0;">The widget would also include information linked to the user's cellphone plan with the carrier. The user would get notifications of their data plan and quick links to the carrier's site in order to top-up on data.</p>
+        </div>
+        <div class="inline-media" style="margin:0;">
+          <img src="plan.webp" alt="Sprint Lumen data plan screen showing remaining balance">
+        </div>
+      </div>
+
+      <div class="inline-media reveal" style="margin-top:56px;">
+        <img src="fixed.webp" alt="Sprint Lumen toolbar shortcut sidebar on iPad">
+      </div>
+
+      <div class="inline-media reveal">
+        <img src="tb4.webp" alt="Sprint Lumen toolbar concept across iPhone and iPad">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-breaker">\\\</div>
+
+<div class="wrap">
+  <div class="next-project">
+    <a href="index.html#work">Back to all projects →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">© 2026 SAMANTHA CO</div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  (function(){
+    var bg = document.getElementById('starsBg');
+    if(!bg) return;
+    var count = window.innerWidth < 640 ? 4 : 8;
+    var cols = window.innerWidth < 640 ? 2 : 4;
+    var rows = Math.ceil(count / cols);
+    var cellW = 100 / cols;
+    var cellH = 100 / rows;
+    var cell = 0;
+    for(var i = 0; i < count; i++){
+      var star = document.createElement('div');
+      star.className = 'star';
+      var size = (Math.random() * 26 + 22).toFixed(1);
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      var col = cell % cols;
+      var row = Math.floor(cell / cols);
+      cell++;
+      var top = row * cellH + Math.random() * (cellH * 0.7) + cellH * 0.1;
+      var left = col * cellW + Math.random() * (cellW * 0.7) + cellW * 0.1;
+      star.style.top = top + '%';
+      star.style.left = left + '%';
+      star.style.opacity = (Math.random() * 0.4 + 0.35).toFixed(2);
+      star.style.animationDelay = (Math.random() * 3.4).toFixed(2) + 's';
+      star.style.animationDuration = (2.4 + Math.random() * 2.4).toFixed(2) + 's';
+      bg.appendChild(star);
+    }
+  })();
+
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || !revealEls.length){
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
