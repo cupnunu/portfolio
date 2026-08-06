@@ -23,6 +23,7 @@
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z' fill='%23F2C14E'/></svg>");
     background-size:contain; background-repeat:no-repeat; background-position:center;
     animation:twinkle 3.4s ease-in-out infinite;
+    pointer-events:auto; cursor:grab; touch-action:none;
   }
   @media (prefers-reduced-motion: reduce){
     .star{animation:none; opacity:0.4 !important;}
@@ -48,9 +49,7 @@
   /* --- nav --- */
   nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(242,244,241,0.85);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
+    background:transparent;
   }
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
   .logo{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:1.1rem; letter-spacing:0.02em;}
