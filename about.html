@@ -25,11 +25,11 @@
   .about-hero-text p{margin-bottom:20px; margin-left:80px;}
   .about-hero-greet{
     font-family:'Lexend Giga', sans-serif; font-weight:600; font-size:clamp(2rem, 6vw, 3.4rem);
-    margin:0 0 8px; line-height:1.05;
+    margin:0 0 8px; line-height:0.6;
   }
   .about-hero-wave{
     font-family:'Lexend Giga', sans-serif; font-weight:600; font-size:clamp(2rem, 6vw, 3.4rem);
-    color:var(--ink); margin:0 0 4px; line-height:1.05; margin-left:-24px;
+    color:var(--ink); margin:0 0 4px; line-height:0.2; margin-left:-24px;
   }
   .accent-text{color:var(--accent); font-weight:600;}
   .about-hero-lede{
@@ -62,12 +62,14 @@
 <div class="wrap">
   <div class="about-hero">
     <div class="about-hero-photo reveal">
-      <img src="about-photo.png" alt="Samantha Co laughing in front of a corrugated metal wall">
+      <img src="about-photo.png" alt="Samantha Co">
     </div>
     <div class="about-hero-text">
-      <p class="about-hero-wave"><span style="color:var(--spark);">Hi, Mabuhay,</p>
-      <h1 class="about-hero-greet"><span style="color:var(--spark);">I'm Samantha</h1>
-      <p class="about-hero-greet" style="margin-left:60px; margin-top:-8px;"><span class="emoticon"><span style="color:var(--spark);">⸜ʕ•ᴥ•ʔ</span></span></p>
+      <div id="greetingHover" style="position:relative;">
+        <p class="about-hero-wave"><span style="color:var(--spark);">Hi, Mabuhay,</span></p>
+        <h1 class="about-hero-greet"><span style="color:var(--spark);">I'm Samantha</span></h1>
+        <p class="about-hero-greet" style="margin-left:60px; margin-top:-8px;"><span class="emoticon"><span style="color:var(--spark);">⸜ʕ•ᴥ•ʔ</span></span></p>
+      </div>
       <p>I'm a Staff Product Designer from the Philippines via Canada, now based in San Francisco. An immigrant raised in culturally mixed and diverse hubs, my joy comes from <span class="accent-text">connecting humans</span> to content and experiences they love through <span class="accent-text">meaningful concepts</span>. </p>
 
         <p>I built my first commissioned website at 11 for a local laser tag company, growing up in the age of Geocities and Angelfire websites, and the early days of Adobe Photoshop. I eventually earned my BA in Interaction Design from Simon Fraser University in 2012. I've led design at <a href="https://www.keycafe.com/s/" target="_blank" rel="noopener noreferrer">Keycafe</a>; was part of <a href="https://www.opera.com" target="_blank" rel="noopener noreferrer">Opera Software</a>'s design team; co-founded Zenlabs, and OurJamz cloud studio; and freelanced steadily over the years.</p>
@@ -172,7 +174,68 @@
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function(el){ observer.observe(el); });
   })();
+
+  (function(){
+    var container = document.getElementById('greetingHover');
+    if(!container) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduceMotion) return;
+
+    function splitIntoLetters(node){
+      var children = Array.prototype.slice.call(node.childNodes);
+      children.forEach(function(child){
+        if(child.nodeType === 3){
+          var text = child.textContent;
+          var frag = document.createDocumentFragment();
+          for(var i = 0; i < text.length; i++){
+            var ch = text[i];
+            var span = document.createElement('span');
+            span.className = 'letter-hover';
+            span.style.display = 'inline-block';
+            span.style.willChange = 'transform';
+            span.textContent = ch === ' ' ? '\u00A0' : ch;
+            frag.appendChild(span);
+          }
+          node.replaceChild(frag, child);
+        } else if(child.nodeType === 1){
+          splitIntoLetters(child);
+        }
+      });
+    }
+    splitIntoLetters(container);
+
+    var letters = container.querySelectorAll('.letter-hover');
+
+    container.addEventListener('mousemove', function(e){
+      var mx = e.clientX;
+      var my = e.clientY;
+
+      letters.forEach(function(letter){
+        var lRect = letter.getBoundingClientRect();
+        var lCenterX = lRect.left + lRect.width / 2;
+        var lCenterY = lRect.top + lRect.height / 2;
+        var dx = lCenterX - mx;
+        var dy = lCenterY - my;
+        var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        var maxDist = 90;
+        var strength = Math.max(0, 1 - dist / maxDist);
+        var pushX = (dx / dist) * strength * 22;
+        var pushY = (dy / dist) * strength * 22;
+        letter.style.transition = 'transform 0.12s ease-out';
+        letter.style.transform = 'translate(' + pushX.toFixed(1) + 'px, ' + pushY.toFixed(1) + 'px)';
+      });
+    });
+
+    container.addEventListener('mouseleave', function(){
+      letters.forEach(function(letter){
+        letter.style.transition = 'transform 0.6s cubic-bezier(.34,1.56,.64,1)';
+        letter.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  })();
 </script>
+
+<script src="draggable-stars.js"></script>
 
 </body>
 </html>
