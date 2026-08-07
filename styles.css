@@ -130,7 +130,7 @@
     font-family:'Lexend Giga', sans-serif; font-weight:600; font-size:1.6rem; line-height:1.3;
     color:var(--ink); max-width:none;
   }
-  .highlight-green{color:var(--accent);}
+  .highlight-green{color:var(--accent); font-weight:600;}
   .results-block{position:relative; margin-top:140px;}
   .results-block .results-statement:first-of-type{margin-bottom:20px;}
   .results-block .star-decor{
