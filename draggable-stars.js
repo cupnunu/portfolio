@@ -1,6 +1,6 @@
 (function(){
   function initDraggableStars(){
-    var stars = document.querySelectorAll('.star');
+    var stars = Array.prototype.slice.call(document.querySelectorAll('.star'));
     if(!stars.length) return;
 
     var dragging = null;
@@ -11,10 +11,21 @@
       return {x: e.clientX, y: e.clientY};
     }
 
-    function onDown(e, star){
+    function findStarAt(x, y){
+      if(document.elementsFromPoint){
+        var els = document.elementsFromPoint(x, y);
+        for(var i = 0; i < els.length; i++){
+          if(els[i].classList && els[i].classList.contains('star')) return els[i];
+        }
+        return null;
+      }
+      var el = document.elementFromPoint(x, y);
+      return (el && el.classList && el.classList.contains('star')) ? el : null;
+    }
+
+    function startDrag(star, pt){
       dragging = star;
       var rect = star.getBoundingClientRect();
-      var pt = getPoint(e);
       offsetX = pt.x - rect.left;
       offsetY = pt.y - rect.top;
 
@@ -26,6 +37,13 @@
       star.style.left = rect.left + 'px';
       star.style.top = rect.top + 'px';
       star.style.cursor = 'grabbing';
+    }
+
+    function onDown(e){
+      var pt = getPoint(e);
+      var star = findStarAt(pt.x, pt.y);
+      if(!star) return;
+      startDrag(star, pt);
       e.preventDefault();
     }
 
@@ -65,7 +83,6 @@
       var force = 90 + Math.random() * 40;
       var bx = Math.cos(angle) * force;
       var by = Math.sin(angle) * force;
-      var savedAnimation = star.dataset.savedAnimation || star.style.animation || 'twinkle 3.4s ease-in-out infinite';
 
       star.style.animation = 'none';
       star.style.transition = 'transform 0.35s cubic-bezier(.25,.8,.35,1)';
@@ -77,7 +94,7 @@
         setTimeout(function(){
           star.style.transition = '';
           star.style.transform = '';
-          star.style.animation = savedAnimation;
+          star.style.animation = '';
           star.dataset.bouncing = 'false';
         }, 560);
       }, 350);
@@ -90,12 +107,8 @@
       dragging = null;
     }
 
-    stars.forEach(function(star){
-      star.dataset.savedAnimation = star.style.animation;
-      star.addEventListener('mousedown', function(e){ onDown(e, star); });
-      star.addEventListener('touchstart', function(e){ onDown(e, star); }, { passive: false });
-    });
-
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('touchstart', onDown, { passive: false });
     window.addEventListener('mousemove', onMove);
     window.addEventListener('touchmove', onMove, { passive: false });
     window.addEventListener('mouseup', onUp);
@@ -117,3 +130,4 @@
     waitForStars(0);
   }
 })();
+
