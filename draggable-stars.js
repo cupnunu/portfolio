@@ -5,6 +5,46 @@
 
     var dragging = null;
     var offsetX = 0, offsetY = 0;
+    var bubble = null;
+    var PHRASES = ['teehee', 'yahoo!', 'oh my!', 'hello!', 'weee', 'woweee'];
+
+    function createBubble(){
+      var el = document.createElement('div');
+      var phrase = PHRASES[Math.floor(Math.random() * PHRASES.length)];
+      el.textContent = phrase;
+      el.style.cssText = [
+        'position:fixed', 'z-index:10001', 'pointer-events:none',
+        'background:#fff', 'color:#2b2b2b',
+        'font-family:\'Space Grotesk\', sans-serif', 'font-weight:600', 'font-size:0.8rem',
+        'padding:5px 11px', 'border-radius:14px', 'border:1.5px solid #2b2b2b',
+        'box-shadow:2px 2px 0 rgba(0,0,0,0.15)',
+        'white-space:nowrap',
+        'transform:translate(-50%, -130%) scale(0.5)',
+        'opacity:0', 'transition:transform 0.18s cubic-bezier(.34,1.56,.64,1), opacity 0.18s ease'
+      ].join(';');
+      document.body.appendChild(el);
+      requestAnimationFrame(function(){
+        el.style.opacity = '1';
+        el.style.transform = 'translate(-50%, -130%) scale(1)';
+      });
+      return el;
+    }
+
+    function positionBubble(star){
+      if(!bubble) return;
+      var rect = star.getBoundingClientRect();
+      bubble.style.left = (rect.left + rect.width / 2) + 'px';
+      bubble.style.top = rect.top + 'px';
+    }
+
+    function removeBubble(){
+      if(!bubble) return;
+      var el = bubble;
+      bubble = null;
+      el.style.opacity = '0';
+      el.style.transform = 'translate(-50%, -110%) scale(0.6)';
+      setTimeout(function(){ el.remove(); }, 180);
+    }
 
     function getPoint(e){
       if(e.touches && e.touches.length) return {x: e.touches[0].clientX, y: e.touches[0].clientY};
@@ -37,6 +77,9 @@
       star.style.left = rect.left + 'px';
       star.style.top = rect.top + 'px';
       star.style.cursor = 'grabbing';
+
+      bubble = createBubble();
+      positionBubble(star);
     }
 
     function onDown(e){
@@ -54,6 +97,7 @@
       var newTop = pt.y - offsetY;
       dragging.style.left = newLeft + 'px';
       dragging.style.top = newTop + 'px';
+      positionBubble(dragging);
 
       var dRect = dragging.getBoundingClientRect();
       var dCenterX = dRect.left + dRect.width / 2;
@@ -105,6 +149,7 @@
       dragging.style.cursor = 'grab';
       dragging.style.zIndex = '';
       dragging = null;
+      removeBubble();
     }
 
     document.addEventListener('mousedown', onDown);
@@ -130,4 +175,3 @@
     waitForStars(0);
   }
 })();
-
