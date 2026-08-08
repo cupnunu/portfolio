@@ -15,8 +15,8 @@
       el.style.cssText = [
         'position:fixed', 'z-index:10001', 'pointer-events:none',
         'background:#fff', 'color:#2b2b2b',
-        'font-family:\'Space Grotesk\', sans-serif', 'font-weight:600', 'font-size:0.8rem',
-        'padding:5px 11px', 'border-radius:14px', 'border:1.5px solid #2b2b2b',
+        'font-family:\'Space Grotesk\', sans-serif', 'font-weight:600', 'font-size:0.62rem',
+        'padding:3px 8px', 'border-radius:10px', 'border:1.25px solid #2b2b2b',
         'box-shadow:2px 2px 0 rgba(0,0,0,0.15)',
         'white-space:nowrap',
         'transform:translate(-50%, -130%) scale(0.5)',
